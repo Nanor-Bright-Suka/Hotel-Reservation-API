@@ -9,17 +9,11 @@ import org.springframework.stereotype.Component;
 @Getter
 public class SecurityEnvironment {
 
-    @Value("${spring.mail.host}")
-    private String mailHost;
+    @Value("${sendgrid.api.key}")
+    private String apiKey;
 
-    @Value("${spring.mail.port}")
-    private Integer mailPort;
-
-    @Value("${spring.mail.username}")
-    private String mailUsername;
-
-    @Value("${spring.mail.password}")
-    private String mailPassword;
+    @Value("${sendgrid.from.email}")
+    private String fromEmail;
 
     @Value("${jwt.secret}")
     private String token;
